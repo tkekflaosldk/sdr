@@ -2,7 +2,7 @@
 var socket = io();
 
 localStorage.setItem('data',localStorage.getItem('data') || 
-
+"1234"
 );
 var datas="";
 var tests="";
