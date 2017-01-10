@@ -316,7 +316,7 @@ var datas="";
 var tests="";
 socket.emit('echo','echosend');
 socket.on('echo',function(msg){
-	console.log(msg)
+//	console.log(msg)
 });
 window.addEventListener('load', function() {
 	new FastClick(document.body);
@@ -325,6 +325,8 @@ window.addEventListener('load', function() {
 	opentest();
 }, false);
 function data(val){
+	check();
+	return;
 	datas += val;
 	switch (val) {
 		case '1':
@@ -343,6 +345,8 @@ function data(val){
 	check();
 }
 function test(val){
+	check();
+	return;
 	tests += val;
 	switch (val) {
 		case '1':
@@ -362,18 +366,12 @@ function test(val){
 }
 function initdata(){
 	datas = "";
-	var datum = localStorage.getItem('data') || "";
-	if(datum.length < 1) return;
-	for(var i = 0 ; i < datum.length ; i++){
-		data(datum[i]);
-	}
+	var datum = localStorage.getItem('data') || "";if(datum.length < 1) return;for(var i = 0 ; i < datum.length ; i++){data(datum[i]);}
 	check();
 }
 function cleardata(){
 	datas = "";
-	while ( document.getElementById("data").hasChildNodes() ) {
-		 document.getElementById("data").removeChild( document.getElementById("data").lastChild );
-	}
+	while ( document.getElementById("data").hasChildNodes() ) { document.getElementById("data").removeChild( document.getElementById("data").lastChild );}
 	check();
 };
 function savedata(){
@@ -390,17 +388,12 @@ function downdata(){
 };
 function inittest(){
 	tests = "";
-	var testum = localStorage.getItem('test') || "";
-	if(testum.length < 1) return;
-	for(var i = 0 ; i < testum.length ; i++){
-		test(testum[i]);
-	}
+	var testum = localStorage.getItem('test') || "";if(testum.length < 1) return;for(var i = 0 ; i < testum.length ; i++){test(testum[i]);}
+	check();
 }
 function cleartest(){
 	tests = "";
-	while ( document.getElementById("test").hasChildNodes() ) {
-		 document.getElementById("test").removeChild( document.getElementById("test").lastChild );
-	}
+	while ( document.getElementById("test").hasChildNodes() ) { document.getElementById("test").removeChild( document.getElementById("test").lastChild );}
 	check();
 };
 function savetest(){
@@ -417,11 +410,11 @@ function downtest(){
 };
 function minusdata(){
 	datas = datas.slice(0,datas.length-1);
-	document.getElementById('data').removeChild(document.getElementById('data').childNodes[0]);
+//	document.getElementById('data').removeChild(document.getElementById('data').childNodes[0]);
 }
 function minustest(){
 	tests = tests.slice(0,tests.length-1);
-	document.getElementById('test').removeChild(document.getElementById('test').childNodes[0]);
+//	document.getElementById('test').removeChild(document.getElementById('test').childNodes[0]);
 }
 function check(){
 		if(datas.length==0||tests.length==0) {
