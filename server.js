@@ -51,24 +51,12 @@ app.get(
   '/index.html' ); });
 
 app.get(
-  '/2', function(req, res){ res.sendFile(__dirname +
-  '/index2.html' ); });
-
-app.get(
   '/index.js', function(req, res){ res.sendFile(__dirname +
   '/index.js' ); });
 
 app.get(
-  '/index2.js', function(req, res){ res.sendFile(__dirname +
-  '/index2.js' ); });
-
-app.get(
   '/index.css' , function(req, res){ res.sendFile(__dirname +
   '/index.css' ); });
-
-app.get(
-  '/index2.css' , function(req, res){ res.sendFile(__dirname +
-  '/index2.css' ); });
 
 app.get(
   '/convert' , function(req, res){ res.sendFile(__dirname +
