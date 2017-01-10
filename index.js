@@ -175,4 +175,5 @@ function check(){
 	 d3gcountt.innerText = c+"회";
 	 d4wresult.innerText = parseInt(d/sum*100)+"%";
 	 d4wcountt.innerText = d+"회";
+	document.getElementById('list').innerText = datas.length;
 }
