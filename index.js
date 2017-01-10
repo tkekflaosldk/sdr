@@ -2,7 +2,9 @@
 var socket = io();
 
 localStorage.setItem('data',localStorage.getItem('data') || 
-"1234"
+
+		     
+		     
 );
 var datas="";
 var tests="";
@@ -19,20 +21,16 @@ window.addEventListener('load', function() {
 function data(val){
 	datas += val;
 	switch (val) {
-		case '1':
-			document.getElementById("data").innerText+="1";
+		case '1': 
 //			document.getElementById("data").insertBefore(document.getElementById("w3w").cloneNode(true),document.getElementById("data").childNodes[0]);
 			break;
-		case '2':
-			document.getElementById("data").innerText+="2";
+		case '2': 
 //			document.getElementById("data").insertBefore(document.getElementById("w4g").cloneNode(true),document.getElementById("data").childNodes[0]);
 			break;
-		case '3':
-			document.getElementById("data").innerText+="3";
+		case '3': 
 //			document.getElementById("data").insertBefore(document.getElementById("d3g").cloneNode(true),document.getElementById("data").childNodes[0]);
 			break;
-		case '4':
-			document.getElementById("data").innerText+="4";
+		case '4': 
 //			document.getElementById("data").insertBefore(document.getElementById("d4w").cloneNode(true),document.getElementById("data").childNodes[0]);
 			break;
 	}
